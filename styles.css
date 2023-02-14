@@ -1,30 +1,79 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
 body {
+    background-color: #f0eef1;
     margin: 0;
 }
 
 header {
-    border: 2px solid black;
-    padding: 80px 0 80px 0;
-    width: 100vw;
-    margin-bottom: 20px;
+    width: 100%;
+    height: 110px;
+    background-color: white;
+}
+
+header p {
+    font-size: 24px;
 }
 
 main {
-    width: min(70vw, 100% - 2rem);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 15px;
-
-    margin-right: auto;
-    margin-left: auto;
+    display: flex;
+    justify-content:     center;
+    align-content: center;
 }
 
-.card {
-    border: 2px solid black;
+.form-popup {
+    display: none;
+    position: fixed;
+    width: 250px;
+    bottom: 40%;
+    right: 40%;
+    padding: 25px;
+    border-radius: 12px;
+    background-color: #f1f1f1;
+    z-index: 9;
+}
+
+.form-inputs {
+    display: flex;
+    flex-direction: column  ;
+    gap: 5px;
+}
+
+.form-popup input {
+    border: none;
     border-radius: 8px;
+    padding: 12px;
+    text-align: center;
 }
 
-.card img {
-    width: 3em;
+.form-popup button {
+    border: none;
+    border-radius: 6px;
+    padding: 16px 32px;
+    background-color: #9fff9c;
+    text-align: center;
+}
+
+#add-book {
+    border: none;
+    padding: 50px;
+    background-color: #f0eef1;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#add-book:hover {
+    background-color: #f0eef1b3;
+}
+
+#page-mask {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
