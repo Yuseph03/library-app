@@ -3,24 +3,71 @@
 }
 
 body {
-    background-color: #f0eef1;
     margin: 0;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 header {
     width: 100%;
-    height: 110px;
+    height: 100px;
     background-color: white;
 }
 
 header p {
-    font-size: 24px;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 35px 0 0 25px;
+}
+
+#add-book {
+    border: none;
+    background-color: #f0eef1;
+    font-size: 28px;
+    font-weight: 600;
+    margin-top: 35px;
 }
 
 main {
+    height: 100vh;
+    background-color: #f1f1f1;
+}
+
+#card-container {
     display: flex;
-    justify-content:     center;
-    align-content: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.card button {
+    margin: 5px;
+    border: none;
+    padding: 15px;
+    width: 200px;
+    font-size: inherit;
+    font-weight: bold;
+}   
+
+.readToggle {
+    background-color: #f35757;
+}
+
+.on {
+    background-color: #9fff9c;
+}
+
+#removeBook {
+    background-color: #f0eef1;
 }
 
 .form-popup {
@@ -37,7 +84,7 @@ main {
 
 .form-inputs {
     display: flex;
-    flex-direction: column  ;
+    flex-direction: column;
     gap: 5px;
 }
 
@@ -54,18 +101,6 @@ main {
     padding: 16px 32px;
     background-color: #9fff9c;
     text-align: center;
-}
-
-#add-book {
-    border: none;
-    padding: 50px;
-    background-color: #f0eef1;
-    font-size: x-large;
-    font-weight: bold;
-}
-
-#add-book:hover {
-    background-color: #f0eef1b3;
 }
 
 #page-mask {

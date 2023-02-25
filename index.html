@@ -5,33 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
     <title>library</title>
 </head>
 <body>
     <header>
+
         <p>Library</p>
+
     </header>
+
     <main>
-        <button id="add-book" onclick="openForm()">+ Add Book</button>
+        <button id="add-book">+ Add Book</button>
+
+        <div id="card-container">
+            <div class="card">
+                <p>'The Hobbit'</p>
+                <p>Tolkien</p>
+                <p>450</p>
+                <button id="readToggle" class="readToggle on">Read</button>
+                <button id="removeBook">Remove</button>
+            </div>
+        </div>
 
         <div class="form-popup" id="myForm">
             <form class="form-container">
               <h1>New Book</h1>
-                
               <div class="form-inputs">
-                  <input type="text" placeholder="Title" name="Title" required>
-                  <input type="text" placeholder="Author" name="Author" required>
-                  <input type="number" placeholder="Pages" name="Pages" required>
+                  <input type="text" placeholder="Title" name="Title" id="title" required> 
+                  <input type="text" placeholder="Author" name="Author" id="author" required>
+                  <input type="number" placeholder="Pages" name="Pages" id="pages" required>
               </div>
-              
-              <p>Have you read it yet? <input type="checkbox"></p>
-
-              <button type="submit">Submit</button>
+              <p>Have you read it yet? <input type="checkbox" id="readStatus"></p>
+              <button type="submit" id="addBookSubmit">Submit</button>
             </form>
         </div>
 
-        <div id="page-mask" onclick="closeForm()"></div>
+        <div id="page-mask"></div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
