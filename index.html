@@ -5,27 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic&family=Orbitron:wght@500&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script>
     <title>library</title>
 </head>
 <body>
     <header>
-
-        <p>Library</p>
-
+        <p>Library - <span>كتابخانه</span></p>
     </header>
 
     <main>
-        <button id="add-book">+ Add Book</button>
+        <div class="add-container"><button id="add-book">+ Add Book</button></div>
 
-        <div id="card-container">
-            <div class="card">
-                <p>'The Hobbit'</p>
-                <p>Tolkien</p>
-                <p>450</p>
-                <button id="readToggle" class="readToggle on">Read</button>
-                <button id="removeBook">Remove</button>
-            </div>
-        </div>
+        <div id="card-container"></div>
 
         <div class="form-popup" id="myForm">
             <form class="form-container">
@@ -39,9 +37,20 @@
               <button type="submit" id="addBookSubmit">Submit</button>
             </form>
         </div>
-
-        <div id="page-mask"></div>
     </main>
+    <footer class="footer">
+        <p>
+          Copyright ©
+          <script>
+            document.write(new Date().getFullYear())
+          </script>
+          Yuseph03
+        </p>
+        <a href="https://github.com/Yuseph03" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+    </footer>
+    <div id="page-mask"></div>
     <script src="script.js"></script>
 </body>
 </html>
